@@ -1,0 +1,145 @@
+:root {
+  --violet: hsl(257, 40%, 49%);
+  --Soft-Magenta: hsl(300, 69%, 71%);
+  --padding-container: 60px 0;
+}
+
+html {
+  height: 100vh;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: "Poppins", sans-serif;
+}
+
+.hero {
+  background-color: var(--violet);
+  position: relative;
+}
+
+.hero::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  width: 100%;
+  height: 400px;
+
+  background-image: url(images/bg-mobile.svg);
+  background-repeat: no-repeat;
+  background-size: 100% 400px;
+}
+
+.container {
+  width: 90%;
+  margin: 0 auto;
+  max-width: 1200px;
+  padding: var(--padding-container);
+  overflow: hidden;
+  position: relative;
+}
+
+.nav {
+  --padding-container: 30px 0;
+}
+
+.nav_logo {
+  width: 150px;
+  display: block;
+}
+
+.hero_container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.hero_img {
+  width: 100%;
+  max-width: 350px;
+  margin: 0 auto;
+  display: block;
+}
+
+.hero_texts {
+  margin: 3.5em 0;
+  color: #fff;
+  text-align: center;
+}
+
+.hero_title {
+  font-family: "Poppins", sans-serif;
+  font-size: 1.7rem;
+}
+
+.hero_paragraph {
+  line-height: 1.5;
+  margin: 1.2em 0 1.7em;
+}
+
+.hero_cta {
+  display: inline-block;
+  color: var(--violet);
+  background-color: #fff;
+  text-decoration: none;
+  padding: 1em 6em;
+  border-radius: 2em;
+  box-shadow: 0 1px 4px rgb(0, 0, 0, 0.5);
+}
+
+.hero_contact {
+  display: flex;
+  gap: 1.3em;
+}
+
+.hero_link {
+  text-decoration: none;
+  width: 40px;
+  height: 40px;
+  border: 1px solid #fff;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.hero_icon {
+  width: 50%;
+  height: 50%;
+}
+
+@media (min-width: 768px) {
+  .hero::before {
+    background-image: url(images/bg-desktop.svg);
+    height: 100%;
+    background-size: 100% 100%;
+  }
+
+  .hero_container {
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .hero_picture {
+    flex-basis: 45%;
+  }
+
+  .hero_texts {
+    flex-basis: 50%;
+    text-align: left;
+  }
+  .hero_title {
+    font-size: 2rem;
+  }
+
+  .hero_contact {
+    margin-left: auto;
+  }
+}
